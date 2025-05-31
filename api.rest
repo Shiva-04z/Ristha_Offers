@@ -1,0 +1,43 @@
+### Get all offers
+GET http://localhost:3000/offers
+
+###
+
+### Get active offers
+GET http://localhost:3000/offers/active/current
+
+###
+
+### Get offer by ID
+GET http://localhost:3000/offers/6832f5e888abdb79d986a11e
+
+###
+
+### Create new offer
+POST http://localhost:3000/offers
+Content-Type: application/json
+
+{
+  "title": "Weekend Sale5",
+  "description": "Special weekend discounts on all items",
+  "imageUrl": "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsZXxlbnwwfHwwfHx8MA%3D%3D",
+  "validUntil": "2025-06-01T16:20:14.991+00:00",
+  "isActive": true
+}
+
+###
+
+### Update offer
+PUT http://localhost:3000/offers/6832f5e888abdb79d986a11e
+Content-Type: application/json
+
+{
+  "title": "Extended Weekend Sale",
+  "description": "Special weekend discounts extended for one more week",
+  "validUntil": "2025-06-08T16:20:14.991+00:00"
+}
+
+###
+
+### Delete offer
+DELETE http://localhost:3000/offers/6832f5e888abdb79d986a11e 
